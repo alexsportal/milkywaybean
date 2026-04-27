@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MilkywayBean</title>
+<link rel="icon" type="image/x-icon" href="Assets/mwblogo.png">
+
+<style>
+@font-face {
+    font-family: headertextbold;
+    src: url(Fonts/Manjari\ Bold\ 700.ttf);
+}
+
+@font-face {
+    font-family: headertextreg;
+    src: url(Fonts/Manjari\ Regular\ 400.ttf);
+}
+
+@font-face {
+    font-family: headertextthin;
+    src: url(Fonts/Manjari\ Thin\ 100.ttf);
+}
+
+@font-face {
+    font-family: bodytext;
+    src: url(Fonts/NotoSans-VariableFont_wdth\,wght.ttf);
+    font-weight: 300;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow: visible;
+    font-family: bodytext;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(0deg, #FFF6FC 0%, #CABDD8 100%);
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    font-size: .9rem;
+    user-select: none;
+    transition: .3s ease;
+}
+
+header {
+    overflow-x: hidden;
+    background-color: #FFF6FC;
+
+}
+
+#logobanner {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 200;
+}
+
+#title {
+    font-family: headertextbold;
+    font-size: 1.7rem;
+    text-align: center;
+    color: #A969B9;
+    border-bottom: solid 1px #a969b947;
+    width: 100%;
+    margin: auto;
+    margin-top: -20px;
+    padding-bottom: 3px;
+    position: relative;
+    z-index: 300;
+}
+
+#navbar {
+    background-color: white;
+    color: #A969B9;
+    box-shadow: 3px 3px 10px rgba(187, 114, 168, 0.24);
+    padding: 5px 10px;
+    font-size: 15px;
+    font-family: headertextbold;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: center;
+    gap: 20px;
+    width: auto;
+    height: 50px;
+    top: 0;
+    position: sticky;
+    z-index: 100;
+    transition: .3s ease;
+    animation: fadeUp 0.5s  both;
+}
+
+#navmenu {
+    display: none;
+}
+
+a{
+    text-decoration: none;
+    color: #A969B9;
+}
+
+.page {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100px;
+    padding-bottom: 0;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 45px;
+    font-family: headertextreg;
+    font-weight: 400;
+}
+
+.page:hover {
+    background-color: #d9b6dc21;
+    font-weight: 700;
+}
+
+main {
+    padding: 40px 20px;
+}
+
+
+.container, .gallerycontainer {
+    background-color: #FFF6FC;
+    padding: 20px;
+    width: auto;
+    border-radius: 20px;
+    border: 1px white solid;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:20px;
+    transition: .3s ease;
+}
+
+.container {
+    box-shadow: 0px 0px 20px #45258042;
+    transition: 0.4s ease;
+    will-change: transform;
+    isolation: isolate;
+    opacity: 0;
+    transform: translateY(12px);
+    filter: blur(4px);
+    transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), filter 0.6s ease;
+}
+
+
+
+
+.galleryborder {
+    background-color: #C1A3CC;
+    padding: 10px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px #45258042;
+    border: 1px #e5c6e7 solid;
+    transition: 0.3s ease;
+    will-change: transform;
+    isolation: isolate;
+    opacity: 0;
+    transform: translateY(12px);
+    filter: blur(4px);
+    transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), filter 0.6s ease;
+}
+
+.container.visible, .galleryborder.visible {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+}
+
+h3 {
+    line-height: 0;
+    color: #A97DB5;
+}
+
+footer {
+    background-color: #FFF6FC;
+    color: #A969B9;
+    font-family: headertextreg;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: -74px;
+}
+
+#smfooter {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+    padding-bottom: 30px;
+}
+
+.smfootericons {
+    width: 25px;
+    transition: .4s ease;
+}
+
+
+.smbuttons{
+    border-radius: 100%;
+    border: solid 1px #DDBBDF;
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    padding: 8px;
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: .3s ease;
+    justify-content: space-evenly;
+}
+
+#swirl {
+    margin: 0;
+    padding: 0;
+    display: none;
+    font-size: 20px;
+    transition: transform 0.4s ease;
+}
+
+#swirl:hover,
+#swirl:active {
+    animation: swirlSpin 0.6s ease-in-out;
+    cursor: pointer;
+}
+
+.imageborder{
+    width:auto;
+    height:stretch;
+    background-color:white;
+    border: solid 6px #C1A3CC;
+    border-radius:20px;
+    display:flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    padding:20px;
+    text-align: center;
+}
+
+.selfie{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    min-height: 100px;
+    background-size: cover;
+    background-position: top;
+    margin: auto;
+    display: block;
+    background-image: url(Assets/alexmanuel.jpg);
+}
+
+.caption1{
+    font-size:12px;
+    text-align: center;
+}
+
+.caption2{
+    text-align: center;
+}
+
+.button1{
+    border-radius:30px;
+    background-color: #ffffff;
+    padding:10px;
+    display: block;
+    border:#DDBBDF solid 1px;
+    font-family: headertextbold;
+    font-size: 15px;
+    text-align: center;
+    color:#A97DB5;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.button2{
+    border-radius: 30px;
+    background-color: white;
+    padding-bottom: 2px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    border: #DDBBDF solid 1px;
+    font-family: headertextreg;
+    font-size: 15px;
+    text-align: center;
+    color: #A97DB5;
+    transition: 0.3s ease;
+    height: 17px;
+    width:max-content;
+    cursor: pointer;
+    align-items: center;
+}
+
+
+.middleheader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.canvaspaper {
+    position: absolute;
+    z-index: 50;
+    background-color: white;
+    width: 50%;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0px 6px 13.9px -4px #43323e33;
+    background-image: url(Paintings/solareclipse2.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: ease .3s;
+}
+
+.galleryimg {
+    width: calc(25% - 15px);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    transition: ease .3s;
+
+}
+
+.galleryimg:hover{
+    transform: scale(1.01);
+    box-shadow: 0px 6px 13.9px -4px #452d4833;
+}
+
+.button1:hover,.button2:hover,.smbuttons:hover{
+    filter: saturate(1.5);
+    box-shadow: 0px 6px 13.9px -4px #452d4833;
+}
+
+.smfootericons:hover{
+    filter: saturate(1.5);
+}
+
+#welcomeimage{
+    background-image: url(Assets/welcome.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 30%;
+    background-repeat: no-repeat;
+    background-position-y: 50px;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    padding-bottom: 30px;
+    padding-top: 50px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+}
+
+#scrolldown {
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    background-color: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 50%;
+    width: 40px;
+    padding:10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+    animation: bounce 2s infinite;
+}
+
+#scrolldown:hover {
+    background-color: rgba(255,255,255,0.4);
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+}
+
+@media screen and (max-width: 1000px) {
+    .section1 {
+        flex-direction: column;
+    }
+
+    .section1 .container {
+        flex: 100% !important;
+        min-width: unset !important;
+    }   
+
+    .light{
+    height:260px;
+   } 
+}
+
+@keyframes swirlSpin {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0deg); }
+}
+
+
+@media screen and (min-width: 821px) {
+    #logobanner {
+        transform: translateY(-10px);
+        transition: transform 0.4s ease-in-out;
+    }
+
+    #logobanner:hover {
+        transform: translateY(-3px);
+        cursor: pointer;
+    }
+
+}
+
+
+@media screen and (max-width: 820px) {
+    .page {
+        width: 100%;
+        background-color: transparent;
+        transition: background-color 0.3s ease;
+        border-radius: 10px;
+    }
+
+    .page:hover {
+        background-color: #d9b6dc21;
+        font-weight: 700;
+        box-shadow: none;
+    }
+
+    header {
+        position: relative;
+        top: 0;
+        z-index: 200;
+    }
+
+    #logobanner {
+        transform: scale(1.5);
+        transform-origin: center top;
+        cursor: pointer;
+    }
+
+    #title {
+        margin-top: 25px;
+    }
+
+    #navbar {
+        flex-direction: column;
+        position: sticky;
+        top: 0;
+        z-index: 300;
+        gap: 0;
+        padding: 5px 10px;
+        height: auto;
+    }
+
+    #navbar div:first-child {
+        padding: 5px;
+        width: stretch;
+        margin: auto;
+        border-radius: 10px;
+    }
+
+    #navbar div:not(:first-child) {
+        opacity: 0;
+        pointer-events: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 0.3s ease, max-height 0.3s ease, background-color 0.3s ease;
+        padding: 0;
+        border-radius: 10px;
+    }
+
+    #navbar.open div:not(:first-child) {
+        opacity: 1;
+        pointer-events: auto;
+        max-height: 50px;
+        padding: 8px 0;
+    }
+
+    #navmenu {
+        display: block;
+    }
+
+    #swirl {
+        display: block;
+        }   
+    
+    main{
+        padding:20px 30px;
+    }
+}
+
+@media screen and (max-width: 614px) {
+
+
+    .selfie{
+        height:140px;
+        width:100%;
+    }
+
+    h3{
+        text-align: center;
+    }
+
+    .middleheader{
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .canvas {
+        content: url(Assets/canvas2.png);
+    }
+
+    .canvaspaper{
+        width:70%;
+    }
+
+    .galleryimg {
+        width: calc(50% - 10px);
+    }
+
+
+}
+</style>
+</head>
+
+<body>
+<header>
+
+<img id="logobanner" src="Assets/bannerframe.png"/>
+<div id="title">✧ Milkyway<thin style="font-family: headertextthin;">Bean</thin> ✧</div>
+
+</header>
+<nav id="navbar">
+
+<div id="navmenu">
+<p id="swirl">𖦹</p>menu
+</div>
+
+<div class="page"><a  href="">Commissions <br> ✧</a></div>
+<div class="page"><a  href="">Gallery <br> ✧</a></div>
+<div class="page"><a href="" rel="noopener" target="_blank">Etsy <br> ✧</a></div>
+<div class="page"><a href="" rel="noopener" target="_blank">Dolli <br> ✧</a></div>
+<div class="page">Contact <br> ✧</div>
+</nav>
+
+
+<div id="welcomeimage">    
+    <a href="#maincontent" id="scrolldown">⮟</a><br>
+    <p style="font-family: headertextthin;font-size: 75px;color:white;text-shadow: 0px 4px 5px #6b31805e;">Welcome</p>
+
+</div>
+<main style="scroll-margin-top: 60px;" id="maincontent">
+
+<section class="section1" style="display:flex;flex-direction: row;margin:auto;position:relative;width:100%;gap:20px;flex-wrap: wrap;">
+<div class="container" style="flex:55%;">
+    <section style="flex:20%;width:100%;margin-top: 0;margin-left:auto;margin-right:auto">
+    <div class="imageborder">
+        <div class="selfie"></div>
+        <br>
+        <h3>Alexsandria Manuel</h3>
+        <span class="caption1">@MilkywayBean</span>
+
+        <div style="display:flex; flex-direction: row;justify-content: space-around;">
+        <a href="" rel="noopener" target="_blank"><div class="smbuttons"><img style="width:20px;height:auto;display:block;margin:auto" src="Assets/pinterest.png"/></div></a>
+        <a href="" rel="noopener" target="_blank"><div class="smbuttons"><img style="width:20px;height:auto;display:block;margin:auto" src="Assets/bluesky.png"/></div></a>
+        <a href="" rel="noopener" target="_blank"><div class="smbuttons"><img style="width:20px;height:auto;display:block;margin:auto" src="Assets/youtube.png"/></div></a>
+        <a href="" rel="noopener" target="_blank"><div class="smbuttons"><img style="width:20px;height:auto;display:block;margin:auto" src="Assets/tiktok.png"/></div></a>
+        </div>
+    </div>
+
+    </section>
+    <section style="gap:10px;flex: 50%;display: flex;flex-direction: column;justify-content: space-between">
+    <div>
+    <h3>Add witty header title</h3>
+    <br>
+    <p>
+        Creating art that blends the digital and the handcrafted, from oil portraits to character-driven digital worlds. Based in Florida, open to commissions worldwide. 
+        <br><br>
+        Creating art that blends the digital and the handcrafted.
+        Creating art that blends the digital and the handcrafted, from oil portraits to character-driven digital worlds. Based in Florida, open to commissions worldwide. 
+        Creating art that blends the digital and the handcrafted, from oil portraits to character-driven digital worlds. Based in Florida, open to commissions worldwide. 
+
+    </p>
+    </div>
+    <div class="button1">✧ &nbsp;Commissions are open!&nbsp; ✧</div>
+    </section>
+    </div>
+    <div class="container" style="flex:35%;min-width: 268px;">
+        <section style="display:flex; flex-direction:column; justify-content:center; width:100%; height:100%;">
+            <div class="middleheader"><h3>What I'm drawing now</h3> <p class="caption1">Updated: 01/01/2026</p></div>
+            <div style="position: relative; display: inline-block; width: 100%; height: 100%;">
+                <div class="canvaspaper"></div>
+                <img class="canvas" style="width: 100%; height: stretch; display: block;" src="Assets/canvas1.png"/>
+            </div>
+        </section>
+    </div>
+    </section>
+
+
+    
+<section class="section2" style="display:flex;flex-direction:row;margin:auto;margin-top:40px;position:relative;width:100%;gap:20px;">
+    <div class="galleryborder">
+        <div class="middleheader" style="padding-left:20px;padding-right:20px;padding-bottom:5px;">
+            <h3 style="color:#ffffff">Featured Work</h3>
+            <div class="button2"><img style="width:20px;margin-top:-3px;" src="Assets/view.png"/>see more</div>
+        </div>
+        <div class="gallerycontainer" style="background-color:white;">
+            <img class="galleryimg" src="Paintings/selfportrait1.jpg"/>
+            <img class="galleryimg" src="Paintings/portrait1.jpg"/>
+            <img class="galleryimg" src="Paintings/grandma1.jpg"/>
+            <img class="galleryimg" src="Paintings/fae1.jpg"/>
+        </div>
+    </div>
+</section>
+
+<div id="lightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.8); z-index:999; align-items:center; justify-content:center;">
+    <img id="lightboximg" style="max-width:90%; max-height:90%; border-radius:10px;"/>
+</div>
+
+    </main>
+    <footer>
+        <div id="footer"> © Alexsandria Manuel 2026</div>
+        <div id="smfooter">
+        <a href="" rel="noopener" target="_blank"><img class="smfootericons" src="Assets/pinterest.png"/></a>
+        <a href="" rel="noopener" target="_blank"><img class="smfootericons" src="Assets/bluesky.png"/></a> 
+        <a href="" rel="noopener" target="_blank"><img class="smfootericons" src="Assets/youtube.png"/></a>
+        <a href="" rel="noopener" target="_blank"><img class="smfootericons" src="Assets/tiktok.png"/></a>
+        </div>
+    </footer>
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.container, .galleryborder').forEach((el, i) => {
+    el.style.transitionDelay = `${i * 80}ms`;
+    observer.observe(el);
+});
+
+document.querySelectorAll('.galleryimg').forEach((img, i) => {
+    img.style.transitionDelay = `${i * 60}ms`;
+    observer.observe(img);
+});
+</script>
+
+    <script>
+    document.querySelectorAll('.galleryimg').forEach(img => {
+     img.addEventListener('click', () => {
+            const lb = document.getElementById('lightbox');
+            document.getElementById('lightboximg').src = img.src;
+            lb.style.display = 'flex';
+        });
+    });
+
+    document.getElementById('lightbox').addEventListener('click', () => {
+        document.getElementById('lightbox').style.display = 'none';
+    });
+    </script>
+
+    <script>
+    const navmenu = document.getElementById('navmenu');
+    const navbar = document.getElementById('navbar');
+
+    navmenu.addEventListener('click', function(e) {
+        if (window.innerWidth > 820) return;
+        e.stopPropagation();
+        navbar.classList.toggle('open');
+    });
+
+    document.addEventListener('click', function(e) {
+        if (window.innerWidth > 820) return;
+        if (navbar.classList.contains('open') && !navbar.contains(e.target)) {
+            navbar.classList.remove('open');
+        }
+    });
+    </script>
+
+    </body>
+
+    </html>

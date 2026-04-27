@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<style>
+@font-face {
+    font-family: headertextbold;
+    src: url(Fonts/Manjari\ Bold\ 700.ttf);
+}
+
+@font-face {
+    font-family: headertextreg;
+    src: url(Fonts/Manjari\ Regular\ 400.ttf);
+}
+
+@font-face {
+    font-family: headertextthin;
+    src: url(Fonts/Manjari\ Thin\ 100.ttf);
+}
+
+@font-face {
+    font-family: bodytext;
+    src: url(Fonts/NotoSans-VariableFont_wdth\,wght.ttf);
+    font-weight: 300;
+}
+
+body {
+    font-family: bodytext;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(0deg, #FFF6FC 0%, #d9b6dca4 100%);
+    background-color: #d9b6dca4;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    font-size: .8rem;
+    user-select: none;
+    transition: .3s ease;
+}
+
+header {
+    overflow-x: hidden;
+    background-color: #FFF6FC;
+
+}
+
+#logobanner {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 200;
+}
+
+#title {
+    font-family: headertextbold;
+    font-size: 1.7rem;
+    text-align: center;
+    color: #A969B9;
+
+    border-bottom: solid 1px #a969b947;
+    width: 100%;
+    margin: auto;
+    margin-top: -5px;
+    padding-bottom: 3px;
+    position: relative;
+    z-index: 300;
+}
+
+#navbar {
+    background-color: white;
+    color: #A969B9;
+    box-shadow: 3px 3px 10px rgba(187, 114, 168, 0.24);
+    padding: 5px 10px;
+    font-size: 15px;
+    font-family: headertextbold;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: center;
+    gap: 30px;
+    width: auto;
+    height: 34px;
+    top: 0;
+    position: sticky;
+    z-index: 100;
+    transition: .3s ease;
+    animation: fadeUp 0.5s  both;
+}
+
+#navmenu {
+    display: none;
+}
+
+a{
+    text-decoration: none;
+    color: #A969B9;
+}
+
+.page {
+    cursor: pointer;
+    transition: 0.4s ease;
+    width: auto;
+    padding: 5px;
+    padding-left:10px;
+    padding-right:10px;
+    border-radius: 20px;
+    font-family: headertextreg;
+}
+
+.page:hover {
+    background-color: #d9b6dc21;
+    font-family: headertextbold;
+}
+
+main {
+    padding: 20px 40px;
+}
+
+.container, .gallerycontainer {
+    background-color: #FFF6FC;
+    padding: 20px;
+    width: 100%;
+    border-radius: 20px;
+    border: 1px white solid;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:20px;
+}
+
+.container {
+    box-shadow: 0px 0px 20px #dab6da;
+    transition: 0.4s ease;
+    will-change: transform;
+    isolation: isolate;
+    animation: fadeUp 0.5s both;
+}
+
+.galleryborder {
+    background-color: #ddbbdf;
+    padding: 10px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px #dab6da;
+    border: 1px #e5c6e7 solid;
+    transition: 0.4s ease;
+    will-change: transform;
+    isolation: isolate;
+    animation: fadeUp 0.5s  both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: scale(0.99) translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+h3 {
+    line-height: 0;
+    color: #A969B9;
+}
+
+footer {
+    background-color: #FFF6FC;
+    color: #A969B9;
+    font-family: headertextreg;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: -74px;
+}
+
+#smbanner {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+    padding-bottom: 30px;
+}
+
+.smbannericons {
+    width: 25px;
+    transition: .4s ease;
+}
+
+.smbannericons:hover,
+.smbannericons:active {
+    cursor: pointer;
+    filter: saturate(2);
+}
+
+#swirl {
+    margin: 0;
+    padding: 0;
+    display: none;
+    font-size: 20px;
+    transition: transform 0.4s ease;
+}
+
+#swirl:hover,
+#swirl:active {
+    animation: swirlSpin 0.6s ease-in-out;
+    cursor: pointer;
+}
+
+@keyframes swirlSpin {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0deg); }
+}
+
+
+@media screen and (min-width: 661px) {
+    #logobanner {
+        transform: translateY(-10px);
+        transition: transform 0.4s ease-in-out;
+    }
+
+    #logobanner:hover {
+        transform: translateY(0);
+        cursor: pointer;
+    }
+}
+
+
+@media screen and (max-width: 660px) {
+    header {
+        position: relative;
+        top: 0;
+        z-index: 200;
+    }
+
+    #logobanner {
+        transform: scale(1.5);
+        transform-origin: center top;
+        cursor: pointer;
+    }
+
+    #title {
+        margin-top: 25px;
+    }
+
+    #navbar {
+        flex-direction: column;
+        position: sticky;
+        top: 0;
+        z-index: 300;
+        gap: 0;
+        padding: 5px 10px;
+        height: auto;
+    }
+
+    #navbar div:first-child {
+        padding: 5px;
+        width: stretch;
+        margin: auto;
+        border-radius: 10px;
+    }
+
+    #navbar div:not(:first-child) {
+        opacity: 0;
+        pointer-events: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 0.3s ease, max-height 0.3s ease;
+        padding: 0;
+    }
+
+    #navbar.open div:not(:first-child) {
+        opacity: 1;
+        pointer-events: auto;
+        max-height: 30px;
+        padding: 8px 0;
+    }
+
+    #navmenu {
+        display: block;
+    }
+
+    #swirl {
+        display: block;
+    }
+}
+</style>
+</head>
+
+<body>
+<header>
+
+<img id="logobanner" src="Assets/bannerframe.png"/>
+<div id="title">Milkyway<thin style="font-family: headertextthin;">Bean</thin></div>
+
+</header>
+<nav id="navbar">
+
+<div id="navmenu">
+<p id="swirl">𖦹</p>menu
+</div>
+
+<div class="page"><a  href="">✧ Gallery ✧</a></div>
+<div class="page"><a  href="">✧ Commissions ✧</a></div>
+<div class="page"><a href="" rel="noopener" target="_blank">✧ Etsy ✧</a></div>
+<div class="page"><a href="" rel="noopener" target="_blank">✧ Dolli ✧</a></div>
+<div class="page">✧ Contact ✧</div>
+</nav>
+<main>
+
+<section style="display:flex;flex-direction: row;margin:auto;position:relative;width:100%;gap:20px;flex-wrap: wrap;">
+<div class="container" style="flex:50%;">
+    <section>
+    <h3>one</h3>
+    <p>one</p>
+    </section>
+</div>
+<div class="container" style="flex:30%;">
+    <section>
+    <h3>two</h3>
+    <p>two</p>
+    </section>
+</div>
+</section>
+
+<section  style="display:flex;flex-direction: row;margin:auto;margin-top:20px;position:relative;width:100%;gap:20px;">
+<div class="galleryborder">
+    <div style="padding-left:10px;"><h3>three</h3></div>
+    <div class="gallerycontainer" style="width:stretch;padding-bottom:300px;background-color: white;">
+    three
+    </div>
+</div>
+</section>
+
+</main>
+<footer>
+    <div id="footer"> © Alexsandria Manuel 2026</div>
+    <div id="smbanner">
+    <a href="" rel="noopener" target="_blank"><img class="smbannericons" src="Assets/pinterest.png"/></a>
+    <a href="" rel="noopener" target="_blank"><img class="smbannericons" src="Assets/bluesky.png"/></a> 
+    <a href="" rel="noopener" target="_blank"><img class="smbannericons" src="Assets/youtube.png"/></a>
+    <a href="" rel="noopener" target="_blank"><img class="smbannericons" src="Assets/tiktok.png"/></a>
+    </div>
+</footer>
+
+<script>
+const navmenu = document.getElementById('navmenu');
+const navbar = document.getElementById('navbar');
+
+navmenu.addEventListener('click', function(e) {
+    if (window.innerWidth > 660) return;
+    e.stopPropagation();
+    navbar.classList.toggle('open');
+});
+
+document.addEventListener('click', function(e) {
+    if (window.innerWidth > 660) return;
+    if (navbar.classList.contains('open') && !navbar.contains(e.target)) {
+        navbar.classList.remove('open');
+    }
+});
+</script>
+
+</body>
+
+</html>
