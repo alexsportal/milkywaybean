@@ -328,7 +328,7 @@ footer {
     box-shadow: 0px 0px 28px -4px #351f4752;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    object-fit: cover;    
     transition: ease .3s;
 }
 
@@ -340,7 +340,6 @@ footer {
     border-radius: 10px;
     transition: transform 0.3s ease;
     transition: ease .3s;
-
 }
 
 .galleryimg:hover{
@@ -628,7 +627,7 @@ footer {
                 <div class="canvaspaper">
                     <img class="galleryimg" style="width: 100%; height: stretch; display: block;" src="Paintings/untitled4.2.gif"/>
                 </div>
-                <img class="canvas" style="width: 100%; height: stretch; display: block;" src="Assets/canvas1.png"/>
+                <img class="canvas" style="width: 100%; display: block; height: -webkit-fill-available;" src="Assets/canvas1.png"/>
             </div>
         </section>
     </div>
