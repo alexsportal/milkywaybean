@@ -306,6 +306,10 @@ footer {
     flex-wrap: wrap;
 }
 
+.canvas{
+    height:stretch;
+}
+
 .canvaspaper {
     position: absolute;
     z-index: 50;
@@ -323,6 +327,7 @@ footer {
     transition: ease .3s;
     overflow: hidden;
 }
+
 
 
 .canvaspaper img {
