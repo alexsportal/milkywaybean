@@ -70,7 +70,7 @@ header {
 
 #navbar {
     background-color: white;
-    color: #A969B9;
+    color: #9993B9;
     box-shadow: 3px 17px 20px #351f471a;
     padding: 5px 10px;
     font-size: 15px;
@@ -97,7 +97,7 @@ header {
 
 a{
     text-decoration: none;
-    color: #A969B9;
+    color: #9993B9;
 }
 
 .page {
@@ -124,7 +124,7 @@ main {
 
 
 .container, .gallerycontainer {
-    background-color: #FFF6FC;
+    background-color: #ffffff;
     padding: 20px;
     width: auto;
     border-radius: 20px;
@@ -153,7 +153,8 @@ main {
     padding: 10px;
     width: 100%;
     border-radius: 20px;
-    box-shadow: 6px 6px 0px #b4aed6;
+    box-shadow: 8px 8px 0px #b4aed6;
+    border: 2px solid #b4aed6;
     transition: 0.3s ease;
     will-change: transform;
     isolation: isolate;
@@ -176,7 +177,7 @@ h3 {
 
 footer {
     background-color: #FFF6FC;
-    color: #BFB9E0;
+    color: #b4aed6;
     font-family: headertextreg;
     text-align: center;
     padding: 10px;
@@ -215,6 +216,7 @@ footer {
     margin-right: 5px;
     transition: .3s ease;
     justify-content: space-evenly;
+    box-shadow: 3px 3px #c2bce2;
 }
 
 #swirl {
@@ -233,15 +235,15 @@ footer {
 }
 
 .imageborder{
-    width:auto;
-    height:stretch;
-    background-color:white;
+    width: auto;
+    height: stretch;
+    background-color: #f4f3fa;
     border: solid 2px #dcd8f1;
-    border-radius:20px;
-    display:flex;
+    border-radius: 20px;
+    display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    padding:20px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -258,8 +260,9 @@ footer {
 }
 
 .caption1{
-    font-size:12px;
+    font-size:14px;
     text-align: center;
+    color:#434343;
 }
 
 .caption2{
@@ -267,17 +270,18 @@ footer {
 }
 
 .button1{
-    border-radius:30px;
-    background-color: #ffffff;
-    padding:10px;
+    border-radius: 30px;
+    background-color: #f4f3fa;
+    padding: 10px;
     display: block;
-    border:#c9c3e9a6 solid 1px;
+    border: #dcd8f1 solid 6px;
     font-family: headertextbold;
     font-size: 15px;
     text-align: center;
-    color:#9993B9;
+    color: #afa9d3;
     transition: 0.3s ease;
     cursor: pointer;
+    box-shadow: 3px 3px #c2bce2;
 }
 
 .button2{
@@ -291,7 +295,7 @@ footer {
     flex-direction: row;
     gap: 10px;
     border: #c9c3e9a6 solid 1px;
-    font-family: headertextreg;
+    font-family: headertextbold;
     font-size: 15px;
     text-align: center;
     color: #9993B9;
@@ -300,6 +304,7 @@ footer {
     width:max-content;
     cursor: pointer;
     align-items: center;
+    box-shadow: 3px 3px #b4aed6;
 }
 
 
@@ -317,7 +322,7 @@ footer {
 .canvaspaper {
     position: absolute;
     z-index: 50;
-    background-color: white;
+    background-color: #c0bae1;
     width: 90%;
     height: 86%;
     top: 50%;
@@ -343,7 +348,7 @@ footer {
     width: stretch;
     display: block;
     height: 500px;
-    background-color: #ffffff;
+    background-color: #c0bae12b;
     border-radius: 20px;
     border: solid 2px #dcd8f1;
 }
@@ -358,14 +363,13 @@ footer {
     transition: ease .3s;
 }
 
-.galleryimg:hover{
+.galleryimg:hover,canvaspaper:hover{
     transform: scale(1.01);
-    box-shadow: 0px 0px 28px -4px #351f4752;
 }
 
-.button1:hover,.button2:hover,.smbuttons:hover,.canvaspaper:hover{
+.button1:hover,.button2:hover,.smbuttons:hover{
     filter: saturate(1.5);
-    box-shadow: 0px 6px 13.9px -4px #351f4739;
+    transform: scale(.98,.98);
 }
 
 .smfootericons:hover{
@@ -418,7 +422,7 @@ footer {
 #welcometext{
    font-family: headertextthin;
    font-size: 75px;color:white;
-   text-shadow: 0px 4px 10px #4d286da1;
+   text-shadow: 3px 3px 0px #a9a6bb6e;
    transition: 0.3s ease;
 }
 
@@ -542,6 +546,7 @@ footer {
     .canvas {
         width: stretch;
         object-fit: contain;
+        height:400px;
     }
 
 
