@@ -1,4 +1,4 @@
-─── Navbar ───────────────────────────────────────────────
+// ─── Navbar ───────────────────────────────────────────────
 const navmenu = document.getElementById('navmenu');
 const navbar = document.getElementById('navbar');
 
