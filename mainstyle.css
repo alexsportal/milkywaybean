@@ -587,8 +587,12 @@ footer {
 
 @media screen and (orientation: landscape) and (max-width: 1180px) {
     #welcomeimage {
-        min-height: 65vh;
-        padding-top: 80px;
+    background-attachment: scroll;
+    background-size: 194%;
+    background-position-x: 30%;
+    background-repeat: no-repeat;
+    background-position-y: 100%;
+
     }
 }
 
