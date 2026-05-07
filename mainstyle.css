@@ -340,6 +340,7 @@ footer {
 .canvaspaper video {
     width: stretch;
     height: stretch;
+    height: -webkit-fill-available;
     object-fit: cover;
     object-position: bottom;
     display: block;
