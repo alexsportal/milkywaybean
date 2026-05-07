@@ -431,7 +431,7 @@ footer {
     position: fixed;
     inset: 0;
     z-index: -1;
-    background: linear-gradient(0deg, #FFF6FC 21%, #fff6fca3 100%);
+    background: linear-gradient(0deg, #FFF6FC 21%, #fff6fc58 100%);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(20px);
 }
@@ -543,9 +543,7 @@ footer {
         display: block;
         }   
     
-    main{
-        padding:50px 30px;
-    }
+
 
     #welcomeimage{
         background-attachment: scroll;
