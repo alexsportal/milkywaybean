@@ -97,7 +97,7 @@ header {
 
 a{
     text-decoration: none;
-    color: #9993B9;
+    color: #9c96c0;
 }
 
 .page {
@@ -111,6 +111,7 @@ a{
     border-radius: 45px;
     font-family: headertextreg;
     font-weight: 400;
+    color:#9c96c0;
 }
 
 .page:hover {
@@ -126,7 +127,7 @@ main {
 .container, .gallerycontainer {
     background-color: #ffffff;
     padding: 20px;
-    width: auto;
+    width: stretch;
     border-radius: 20px;
     border: 2px #c0bae1 solid;
     display:flex;
@@ -152,10 +153,10 @@ main {
 .galleryborder {
     background-color: #BFB9E0;
     padding: 10px;
-    width: 100%;
+    width: stretch;
     border-radius: 20px;
-    box-shadow: 8px 8px 0px #a7a1c9;
-    border: 2px solid #b4aed6;
+    box-shadow: 6px 6px 0px #9c96c0;
+    border: 2px solid #9c96c0;
     transition: 0.3s ease;
     will-change: transform;
     isolation: isolate;
@@ -282,20 +283,20 @@ footer {
     color: #afa9d3;
     transition: 0.3s ease;
     cursor: pointer;
-    box-shadow: 3px 3px #c2bce2;
+    box-shadow: 3px 4px #c2bce2;
 }
 
 .button2{
     border-radius: 30px;
     background-color: white;
-    padding-bottom: 2px;
+    padding-bottom: 1px;
     padding-top: 5px;
     padding-left: 10px;
     padding-right: 10px;
     display: flex;
     flex-direction: row;
     gap: 10px;
-    border: #c9c3e9a6 solid 1px;
+    border: #9c96c0 solid 3px;
     font-family: headertextbold;
     font-size: 15px;
     text-align: center;
@@ -305,7 +306,7 @@ footer {
     width:max-content;
     cursor: pointer;
     align-items: center;
-    box-shadow: 3px 3px #b4aed6;
+    box-shadow: 3px 3px #9c96c0;
 }
 
 
@@ -424,6 +425,15 @@ footer {
    font-size: 75px;color:white;
    text-shadow: 3px 3px 0px #a9a6bb6e;
    transition: 0.3s ease;
+}
+
+#pagebg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(0deg, #FFF6FC 21%, #fff6fca3 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 @keyframes bounce {
@@ -608,11 +618,3 @@ footer {
     }
 }
 
-#pagebg {
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    background: linear-gradient(0deg, #FFF6FC 21%, #fff6fca3 100%);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(20px);
-}
