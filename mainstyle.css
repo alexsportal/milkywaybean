@@ -142,6 +142,7 @@ main {
     box-shadow: 6px 6px 0px #c0bae1;
     transition: 0.4s ease;
     will-change: transform;
+    display: flex;
     isolation: isolate;
     opacity: 0;
     transform: translateY(12px);
@@ -339,7 +340,7 @@ footer {
 .canvaspaper video {
     width: 100%;
     max-width:  -webkit-fill-available;
-    height: 100%;
+    height: 97%;
     max-height: -webkit-fill-available;
     object-fit: cover;
     object-position: bottom;
