@@ -608,9 +608,5 @@ footer {
     }
 }
 
-@media screen and (min-width: 821px) and (max-width: 1200px) {
-    .container:last-child section {
-        min-height: 300px;
-    }
-}
+
 
