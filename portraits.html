@@ -22,6 +22,7 @@
     flex-wrap: wrap;
     justify-content: center;
     height: calc(100dvh - 280px);
+    max-height: 75vh;
     margin-bottom:80px;
 }
 
@@ -61,12 +62,14 @@
 }
 
 .infobox{
-
+    
 }
 
 .canvasthumbnail{
-    background-color: grey;
+    background-color: #f4f3fa;
     text-align: center;
+    border: 2px solid #dcd8f1;
+    border-radius: 5px;
 }
 
 #slideshow{
@@ -77,8 +80,20 @@
     margin-bottom: 15px;
     max-height: 474px;
     min-width: 288px;
+    width:stretch;
     height: 474px;
 }
+
+
+th{    
+    background-color: #dcd8f1;
+    border-radius: 15px;
+}
+td{    
+    background-color: #f4f3fa;
+    color:black;
+}
+
 
 @media screen and (max-width: 1026px) and (max-height:601px) {
     .section1 {
@@ -94,17 +109,6 @@
 }
 
 
-@media screen and (max-width: 431px) {
-    .section1 {
-       height:75vh;
-    }
-}
-
-@media screen and (max-width: 391px) {
-    .section1 {
-       height:73vh;
-    }
-}
 </style>
 </head>
 
@@ -153,7 +157,7 @@
 <section class="section2" style="display:flex;flex-direction: row;margin:auto;position:relative;width:100%;gap:20px;flex-wrap: wrap;justify-content: center;margin-top:20px">
     
     <div class="container" style="flex-direction: row;flex-wrap: wrap;">
-        <div class="infobox" style="flex:50%;text-align: center;">
+        <div class="infobox" style=" flex: 50%; text-align: center; display: flex; flex-direction: column; align-items: stretch;">
             <div id="slideshow">slideshow</div>
             <div class="button1">✧ &nbsp;View Work&nbsp; ✧</div>
         </div>
@@ -167,7 +171,7 @@
             </section>
             <section>
                 <div class="canvasoptions">
-                    <div style="    flex-direction: row;display: flex;gap: 20px;align-items: flex-end;text-align: center;justify-content: center;">
+                    <div style="flex-direction: row;display: flex;gap: 20px;align-items: flex-end;text-align: center;justify-content: space-around;">
                         
                         <div class="canvasthumbnailwrap">
                             <div class="canvasthumbnail" style="width:57px;height:71px">
@@ -194,7 +198,8 @@
 
                 </div>
                 <div class="prices">
-                    <table style="margin:auto;margin-top:20px;width:100%">
+                    <table cellpadding="10" style="color:#8a83b1; border:2px #c0bae1 solid;margin:auto;margin-top:20px;width:100%;border-radius: 15px;background-color: #dcd8f1;box-shadow: 6px 6px 0px #c0bae1;">
+                        <tbody background-color: #f4f3fa;box-shadow: 6px 6px 0px #c2bce2;border: none;border-radius: 15px;>
                           <tr>
                                 <th>Number of People</th>
                                 <th>Additional Costs</th>
@@ -207,10 +212,10 @@
                                 <td>2 People</td>
                                 <td>+ $40</td>
                             </tr>
-                                <td>3 People</td>
-                                <td>+ $50</td>
+                                <td style="border-bottom-left-radius: 15px;">3 People</td>
+                                <td style="border-bottom-right-radius: 15px;">+ $50</td>
                             </tr>
-                    
+                        </tbody>
                     </table>
                 </div>
             </section>
