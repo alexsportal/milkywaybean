@@ -589,6 +589,10 @@ footer {
         font-size: 45px;
         text-align: center;
     }
+
+    #title {
+        margin-top: 15px;
+    }
 }
 
 @media screen and (orientation: landscape) and (max-width: 1180px) {
