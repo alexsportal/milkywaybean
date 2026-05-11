@@ -26,7 +26,7 @@
 }
 
 .section1 .container {
-    flex: 1 1 500px;
+    flex: 1 1 300px;
     margin-top: 0;
     display: flex;
     flex-direction: column;
@@ -43,6 +43,7 @@
     height: stretch;
     border-radius: 30px;
     object-fit: cover;
+    object-position: top;
     position: absolute;
     padding: 20px;
     padding-bottom: 124px;
@@ -92,9 +93,17 @@ td{
 
 @media screen and (max-width: 614px) {
    .section1{
-        height: 75vh;
+        height: 70vh;
+    
    }
+    .section1 .container img {
+        object-position: 0px -30px;
+    }
+
 }
+
+
+
 @media screen and (orientation: landscape) and (max-width: 1180px) {
    .section1 .container{
        flex:50;
@@ -130,14 +139,14 @@ td{
 
 <section class="section1">
     <div class="container">
-        <img src="Paintings/selfportrait1.jpg"/>
+        <img src="Paintings/grandma1.jpg"/>
         <div class="caption">
             <p style="font-size: medium; position: relative; bottom: -12px;">text text text text text.</p>
             <div class="button1">✧ &nbsp;View Work&nbsp; ✧</div>
         </div>
     </div>
     <div class="container">
-        <img src="Paintings/COLORINGPAGE1.jpg"/>
+        <img  style="object-position: top;" src="Paintings/QB_Portrait.PNG"/>
         <div class="caption">
             <p style="font-size: medium; position: relative; bottom: -12px;">text text text text text.</p>
             <div class="button1">✧ &nbsp;View Work&nbsp; ✧</div>
