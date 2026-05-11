@@ -340,7 +340,7 @@ footer {
 .canvaspaper video {
     width: 100%;
     max-width:  -webkit-fill-available;
-    height: 97%;
+    height: 95%;
     max-height: -webkit-fill-available;
     object-fit: cover;
     object-position: bottom;
