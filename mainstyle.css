@@ -310,7 +310,6 @@ footer {
     box-shadow: 3px 3px #9c96c0;
 }
 
-
 .middleheader{
     display: flex;
     flex-direction: row;
@@ -318,8 +317,6 @@ footer {
     flex-wrap: wrap;
     align-items: center;
 }
-
-
 
 .canvaspaper {
     position: absolute;
@@ -340,7 +337,7 @@ footer {
 .canvaspaper video {
     width: 100%;
     max-width:  -webkit-fill-available;
-    height: 90%;
+    height: 92%;
     max-height: -webkit-fill-available;
     object-fit: cover;
     object-position: bottom;
