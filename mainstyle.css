@@ -124,7 +124,7 @@ main {
 }
 
 
-.container, .gallerycontainer {
+.container, .gallerycontainer{
     background-color: #ffffff;
     padding: 20px;
     width: stretch;
@@ -337,7 +337,7 @@ footer {
 .canvaspaper video {
     width: 100%;
     max-width:  -webkit-fill-available;
-    height: 93%;
+    height: 94%;
     max-height: -webkit-fill-available;
     object-fit: cover;
     object-position: bottom;
