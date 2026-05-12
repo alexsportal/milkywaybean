@@ -97,7 +97,7 @@ header {
 
 a{
     text-decoration: none;
-    color: #9c96c0;
+    color: #a07ec1;
 }
 
 .page {
@@ -111,7 +111,7 @@ a{
     border-radius: 45px;
     font-family: headertextreg;
     font-weight: 400;
-    color:#9c96c0;
+    color:#a07ec1;
 }
 
 .page:hover {
@@ -365,7 +365,7 @@ footer {
     transition: ease .3s;
 }
 
-.galleryimg:hover,canvaspaper:hover{
+.galleryimg:hover,.section1 .container:hover{
     transform: scale(1.01);
 }
 
