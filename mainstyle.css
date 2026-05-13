@@ -77,7 +77,7 @@ header {
     font-family: headertextbold;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: row;
     text-align: center;
     gap: 20px;
@@ -103,7 +103,8 @@ a{
 .page {
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 100px;
+    width: stretch;
+    width:-webkit-fill-available;
     padding-bottom: 0;
     padding-top: 7px;
     padding-left: 20px;
