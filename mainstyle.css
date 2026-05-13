@@ -142,7 +142,8 @@ a{
     top: 60px;
     margin-left: 2px;
     margin-right: 2px;
-    border-radius:20px;
+    border-bottom-right-radius:20px;
+    border-bottom-left-radius: 20px;
     display:none ;
 }
 
@@ -355,7 +356,7 @@ footer {
 
 .button2{
     border-radius: 30px;
-    background-color: #fff6fc;
+    background-color: #f4f3fa;
     padding-bottom: 1px;
     padding-top: 5px;
     padding-left: 10px;
