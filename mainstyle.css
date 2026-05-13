@@ -73,7 +73,7 @@ header {
     color: #a07ec1;
     box-shadow: 3px 17px 20px #351f471a;
     padding: 5px 10px;
-    font-size: 15px;
+    font-size: 17px;
     font-family: headertextbold;
     display: flex;
     justify-content: center;
@@ -105,7 +105,7 @@ a{
     transition: background-color 0.3s ease;
     width: 100px;
     padding-bottom: 0;
-    padding-top: 10px;
+    padding-top: 7px;
     padding-left: 20px;
     padding-right: 20px;
     border-radius: 45px;
@@ -117,6 +117,65 @@ a{
 .page:hover {
     background-color: #d9b6dc21;
     font-weight: 700;
+}
+
+.navbar2{
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(20px);
+    color: #a07ec1;
+    padding: 5px 10px;
+    font-size: 17px;
+    font-family: headertextreg;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    text-align: center;
+    gap: 20px;
+    width: auto;
+    top: 0;
+    position: sticky;
+    z-index: 100;
+    transition: .3s ease;
+    animation: fadeUp 0.5s both;
+    top: 60px;
+    margin-left: 2px;
+    margin-right: 2px;
+    border-radius:20px;
+    display:none ;
+}
+
+.sectionbutton{
+    margin: auto;
+    background-color: rgb(244 243 250);
+    border-radius: 20px;
+    width: 110px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    height: 25px;
+    width: stretch;
+    width: -webkit-fill-available;
+    transition: 0.3s ease;
+    cursor: pointer;
+    border: solid 1px #c2bce2;
+}
+
+.sectionbutton a{
+    position: relative;
+    top:4px;
+    transition: 0.3s ease;
+    height: stretch;
+    height: -webkit-fill-available;
+    width: stretch;
+    width: -webkit-fill-available;
+    display: block;
+}
+
+.sectionbutton:hover{
+    font-weight: 700;
+    background-color:#ffffff;
+    filter: saturate(1.5);
 }
 
 main {
@@ -176,6 +235,13 @@ main {
 h3 {
     line-height: 0;
     color: #9993B9;
+    font-size: 20px;
+}
+
+.h3sub {
+    line-height: 0;
+    color: #9993B9;
+    font-size: 17px;
 }
 
 footer {
@@ -279,7 +345,7 @@ footer {
     display: block;
     border: #dcd8f1 solid 6px;
     font-family: headertextbold;
-    font-size: 15px;
+    font-size: 17px;
     text-align: center;
     color: #afa9d3;
     transition: 0.3s ease;
@@ -443,7 +509,7 @@ footer {
 }
 
 @media screen and (max-width: 1000px) {
-    .section1 {
+    .sectiontop {
         flex-direction: column;
     }
 
@@ -557,7 +623,10 @@ footer {
         object-fit: contain;
         height:600px;
     }
-
+    .navbar2{
+        top:70px;
+        display: flex;
+    }
 
 }
 

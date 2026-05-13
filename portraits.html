@@ -44,7 +44,6 @@
     height: stretch;
     border-radius: 35px;
     object-fit: cover;
-    object-position: top;
     position: absolute;
     padding: 20px;
     top: 0;
@@ -55,6 +54,7 @@
     position: relative;
     z-index: 10;
     padding: 10px;
+    padding-top:0;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -72,7 +72,7 @@
 }
 
 #slideshow{
-    background-color: #808080;
+    background-color: #bfb9e0;
     margin: auto;
     border-radius: 15px;
     position: relative;
@@ -84,6 +84,7 @@
     min-height: 400px;
     height: stretch;
     height: -webkit-fill-available;
+    
 }
 
 
@@ -110,28 +111,35 @@ td{
     min-width: 250px;
 }
 
+ul {
+  list-style-image: url(Assets/starpoint.png);
+  margin-left: -10px;
+  margin-top:-25px;
+}
+
+li{
+    margin-top:15px;
+}
+
+.qbportrait{
+    object-position: 0px -70px;
+}
+
+
 @media screen and (max-width: 614px) {
    .section1{
         height: 70vh;
     
    }
-    .section1 .container img {
-        object-position: 0px -30px;
+}
+
+
+@media screen and (max-width: 1030px) {
+    .qbportrait {
+        object-position: top;
     }
 
 }
-
-@media screen and (max-width: 672px) {
-   .section1{
-        height: 70vh;
-    
-   }
-    .section1 .container img {
-        object-position: 0px -30px;
-    }
-
-}
-
 
 @media screen and (orientation: landscape) and (max-width: 1180px) {
    .section1 .container{
@@ -166,22 +174,28 @@ td{
 
 <main style="scroll-margin-top: 60px;" id="maincontent">
 
-<section class="section1">
+<section id="section1" class="section1">
     <div class="container">
-        <img src="Paintings/grandma1.jpg"/>
+        <img style="object-position: top;" src="Paintings/grandma1.jpg"/>
         <div class="caption">
             <h3 style="text-align: center;">Oil Portraits</h3>
         </div>
     </div>
     <div class="container">
-        <img src="Paintings/QB_Portrait.PNG"/>
+        <img class="qbportrait" src="Paintings/QB_Portrait.PNG"/>
         <div class="caption">
             <h3 style="text-align: center;">Digital Portraits</h3>
         </div>
     </div>
 </section>
 
-<section class="section2" style="display:flex;flex-direction: row;margin:auto;position:relative;width:100%;gap:20px;flex-wrap: wrap;justify-content: center;margin-top:20px">
+<nav class="navbar2">
+    <div class="sectionbutton"><a href="#section2">Oil</a></div>
+    <div class="sectionbutton"><a href="#section3">Digital</a></div>
+    <div class="sectionbutton"><a href="#section4">Terms</a></div>
+</nav>
+
+<section id="section2" class="section2" style="display:flex;flex-direction: row;margin:auto;position:relative;width:100%;gap:20px;flex-wrap: wrap;justify-content: center;margin-top:20px">
     
     <div class="container" style="gap:30px; flex-direction: row;flex-wrap: wrap;">
         <div class="infobox" style="flex: 30%; gap: 20px; flex-direction: column; display: flex;"> 
@@ -254,12 +268,12 @@ td{
 
 </section>
 
-<section class="section3" style="display:flex;flex-direction: row;margin:auto;position:relative;width:100%;gap:20px;flex-wrap: wrap;justify-content: center;margin-top:20px">
+<section id="section3" class="section3" style="display:flex;flex-direction: row;margin:auto;position:relative;width:100%;gap:20px;flex-wrap: wrap;justify-content: center;margin-top:20px">
     
  <div class="container" style="gap:30px; flex-direction: row;flex-wrap: wrap;">
         <div class="infobox" style="flex: 30%; gap: 20px; flex-direction: column; display: flex; justify-content: space-between;"> 
             <section>
-                <h3 style="text-align: center;">Oil Portraits</h3>
+                <h3 style="text-align: center;">Digital Portraits</h3>
                 <p style="margin-top:30px">Quisque rhoncus quam mauris, in sagittis quam interdum sed. Phasellus tincidunt ullamcorper lectus. Suspendisse at nibh nibh. Quisque nulla ex, tincidunt nec eros a, fermentum lobortis libero.</p>
 
                 <br>
@@ -304,7 +318,7 @@ td{
     </div>
 
 </section>
-<section class="section4" style="display:flex;flex-direction:row;margin:auto;margin-top:20px;position:relative;width:100%;gap:20px;">
+<section id="section4" class="section4" style="display:flex;flex-direction:row;margin:auto;margin-top:20px;position:relative;width:100%;gap:20px;">
     <div class="galleryborder" style="padding-left:20px; padding-right:20px; padding-bottom:20px;">
         <div class="middleheader" style="padding-left:20px;padding-right:20px;padding-bottom:5px;justify-content: center;">
             <h3 style="color:#ffffff">Terms of Service</h3>
@@ -312,9 +326,9 @@ td{
 
         <div class="containerwrap" style="display:flex;gap:20px;flex-wrap: wrap;">
         <div class="container">
-          <h3 style="text-align: center;">Payment</h3>
+          <h3 class="h3sub" style="text-align: center;">Payment</h3>
           <p>
-            <ul style="margin-top:-10px;">
+            <ul>
                 <li>A non-refundable deposit of 50% of the total commission price is required before the Artist begins any work. </li>
                 <li>The remaining 50% balance is due upon completion, before the final artwork or digital file is delivered to the Client. </li>
                 <li>Accepted payment methods: Zelle, Venmo, or PayPal (Goods & Services). </li>
@@ -325,9 +339,9 @@ td{
         </div>
 
         <div class="container">
-          <h3 style="text-align: center;">Reference Photos</h3>
+          <h3 class="h3sub" style="text-align: center;">Reference Photos</h3>
           <p>
-            <ul style="margin-top:-10px;">
+            <ul>
                 <li>The Client is responsible for providing clear, high-quality reference photos. </li>
                 <li>Photos should be well-lit and show the subject(s) clearly. Poor-quality references may affect the final result. </li>
                 <li>The Artist reserves the right to request additional or better reference photos before beginning. </li>
@@ -338,9 +352,9 @@ td{
         </div>
 
         <div class="container">
-          <h3 style="text-align: center;">Revisions & Approval</h3>
+          <h3 class="h3sub" style="text-align: center;">Revisions & Approval</h3>
           <p>
-            <ul style="margin-top:-10px;">
+            <ul>
                 <li>The Artist will provide up to two (2) rounds of minor revisions at no additional cost (e.g., color adjustments, minor detail changes). </li>
                 <li>Major revisions (e.g., changing the composition, adding/removing subjects, or significant rework) may incur an additional fee, to be agreed upon in writing before work begins. </li>
                 <li>The Client will be shown a work-in-progress (WIP) image at roughly 50% completion for feedback. </li>
@@ -350,9 +364,9 @@ td{
         </div>        
         
         <div class="container">
-          <h3 style="text-align: center;">Cancellations</h3>
+          <h3 class="h3sub" style="text-align: center;">Cancellations</h3>
           <p>
-            <ul style="margin-top:-10px;">
+            <ul>
                 <li>The 50% deposit is strictly non-refundable under all circumstances, as it compensates the Artist for time and materials already committed. </li>
                 <li>If the Client cancels after work has begun but before completion, the deposit is forfeited and no refund will be issued. </li>
                 <li>If the Artist is unable to complete the commission for any reason, the full deposit will be refunded to the Client. </li>
@@ -361,9 +375,9 @@ td{
         </div>
 
         <div class="container">
-          <h3 style="text-align: center;">Delivery</h3>
+          <h3 class="h3sub" style="text-align: center;">Delivery</h3>
           <p>
-            <ul style="margin-top:-10px;">
+            <ul>
                 <li>Oil Paintings: Shipped via a tracked and insured carrier, or available for local pickup. Shipping costs are the responsibility of the Client and will be added to the final invoice. </li>
                 <li>Digital Portraits: Delivered as a high-resolution digital file (PNG or JPEG) via email or a file-sharing link within 48 hours of final payment. </li>
                 <li>The Artist is not responsible for damage that occurs during shipping once the package has been handed to the carrier. </li>
@@ -372,9 +386,9 @@ td{
         </div>
 
         <div class="container">
-          <h3 style="text-align: center;">Copyright & Usage</h3>
+          <h3 class="h3sub" style="text-align: center;">Copyright & Usage</h3>
           <p>
-            <ul style="margin-top:-10px;">
+            <ul>
                 <li>The Artist retains full copyright to all artwork created under this agreement. </li>
                 <li>The Client receives a personal, non-commercial license to display and enjoy the artwork. </li>
                 <li>The Artist reserves the right to photograph and share the completed artwork in their portfolio, website, and social media, unless the Client requests confidentiality in writing before work begins. </li>
@@ -384,9 +398,9 @@ td{
         </div>
 
         <div class="container">
-          <h3 style="text-align: center;">Dispute Resolution</h3>
-          <p>
-            Both Parties agree to attempt to resolve any disputes in good faith through direct communication before pursuing any formal action. This Agreement shall be governed by the laws of the state in which the Artist resides.
+          <h3 class="h3sub" style="text-align: center;">Dispute Resolution</h3>
+          <p style="text-align:center">
+            Both Parties agree to attempt to resolve any disputes in good faith through direct communication before pursuing any formal action. This Agreement shall be governed by the laws of Florida.
           </p>
         </div>
 
