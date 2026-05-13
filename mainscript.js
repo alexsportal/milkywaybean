@@ -51,3 +51,70 @@ document.querySelectorAll('.galleryimg').forEach(img => {
 lightbox.addEventListener('click', () => {
     lightbox.style.display = 'none';
 });
+
+// ─── Slideshow ─────────────────────────────────────────────
+function initSlideshow(el) {
+    const slides = el.querySelectorAll('.slide');
+    let current = 0;
+    setInterval(() => {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+    }, 3500); // change ms to adjust speed
+}
+document.querySelectorAll('.slideshow').forEach(initSlideshow);
+const canvasButtons = document.querySelectorAll('.button2');
+const thumbnails = document.querySelectorAll('.canvasthumbnail');
+const priceEls = document.querySelectorAll('.canvas-price');
+
+const basePrices = [150, 250, 350];
+const stretchedPrices = [170, 270, 370];
+
+const panelStyle = {
+    border: '2px solid #d9d9d9',
+    boxShadow: 'none',
+};
+
+const stretchedStyle = {
+
+    boxShadow: '#bababa 3px 3px 0px',
+};
+
+function updatePrices(prices) {
+    priceEls.forEach((el, i) => {
+        el.style.transition = 'opacity 0.3s ease';
+        el.style.opacity = '0';
+        setTimeout(() => {
+            el.textContent = '$' + prices[i];
+            el.style.opacity = '1';
+        }, 300);
+    });
+}
+
+function setThumbnailStyle(style) {
+    thumbnails.forEach(thumb => {
+        thumb.style.border = style.border;
+        thumb.style.boxShadow = style.boxShadow;
+    });
+}
+
+function setActiveButton(activeBtn) {
+    canvasButtons.forEach(b => {
+        b.style.backgroundColor = '';
+        b.style.filter = '';
+    });
+    activeBtn.style.backgroundColor = '#f4f3fa';
+    activeBtn.style.filter = 'saturate(1.5)';
+}
+
+// Default state
+setActiveButton(canvasButtons[0]);
+
+canvasButtons.forEach(btn => {
+    btn.addEventListener('click', function () {
+        setActiveButton(this);
+        const isStretched = this.textContent.trim() === 'Stretched Canvas';
+        setThumbnailStyle(isStretched ? stretchedStyle : panelStyle);
+        updatePrices(isStretched ? stretchedPrices : basePrices);
+    });
+});

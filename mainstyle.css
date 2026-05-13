@@ -125,7 +125,7 @@ a{
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(20px);
     color: #a07ec1;
-    padding: 5px 10px;
+    padding: 10px 10px;
     font-size: 17px;
     font-family: headertextreg;
     display: flex;
@@ -150,6 +150,7 @@ a{
 
 .sectionbutton{
     margin: auto;
+    margin-top:2px;
     background-color: rgb(244 243 250);
     border-radius: 20px;
     width: 110px;
@@ -184,7 +185,6 @@ main {
     padding: 20px 20px;
 }
 
-
 .container, .gallerycontainer{
     background-color: #ffffff;
     padding: 20px;
@@ -210,7 +210,6 @@ main {
     filter: blur(4px);
     transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), filter 0.6s ease;
 }
-
 
 .galleryborder {
     background-color: #BFB9E0;
@@ -357,7 +356,7 @@ footer {
 
 .button2{
     border-radius: 30px;
-    background-color: #f4f3fa;
+    background-color: white;
     padding-bottom: 1px;
     padding-top: 5px;
     padding-left: 10px;
@@ -376,6 +375,7 @@ footer {
     cursor: pointer;
     align-items: center;
     box-shadow: 3px 3px #9c96c0;
+    
 }
 
 .middleheader{

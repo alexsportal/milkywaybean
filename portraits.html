@@ -69,9 +69,11 @@
     background-image: url(Assets/canvas.png);
     background-size: 160px;
     filter: contrast(1.1);
+    transition: border 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+
 }
 
-#slideshow{
+.slideshow {
     background-color: #bfb9e0;
     margin: auto;
     border-radius: 15px;
@@ -81,10 +83,29 @@
     min-width: 288px;
     width: stretch;
     width: -webkit-fill-available;
-    min-height: 400px;
+    min-height: 500px;
     height: stretch;
     height: -webkit-fill-available;
-    
+    overflow: hidden; /* ADD THIS */
+}
+
+.slideshow .slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+    border-radius: 15px;
+}
+
+.slideshow .slide.active {
+    opacity: 1;
+}
+
+.slideshow .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
 }
 
 
@@ -123,6 +144,10 @@ li{
 
 .qbportrait{
     object-position: 0px -70px;
+}
+
+#section2, #section3, #section4 {
+    scroll-margin-top: 126px;
 }
 
 
@@ -175,13 +200,13 @@ li{
 <main style="scroll-margin-top: 60px;" id="maincontent">
 
 <section id="section1" class="section1">
-    <div class="container">
+    <div class="container" onclick="location.href='#section3'">
         <img style="object-position: top;" src="Paintings/grandma1.jpg"/>
         <div class="caption">
             <h3 style="text-align: center;">Oil Portraits</h3>
         </div>
     </div>
-    <div class="container">
+    <div class="container" onclick="location.href='#section4'">
         <img class="qbportrait" src="Paintings/QB_Portrait.PNG"/>
         <div class="caption">
             <h3 style="text-align: center;">Digital Portraits</h3>
@@ -212,23 +237,23 @@ li{
                         
                         <div class="canvasthumbnailwrap">
                             <div class="canvasthumbnail" style="width:57px;height:71px">
-                            <p>8x10</p>
+                                <p>8x10</p>
                             </div>
-                            <p>$150</p>
+                            <p class="canvas-price">$150</p>  
                         </div>
 
                         <div class="canvasthumbnailwrap">
                             <div class="canvasthumbnail" style="width:78px;height:99px">
-                            <p>11x14</p>
+                                <p>11x14</p>
                             </div>
-                            <p>$250</p>
+                            <p class="canvas-price">$250</p>
                         </div>
 
                         <div class="canvasthumbnailwrap">
                             <div class="canvasthumbnail" style="width:114px;height:142px">
                             <p>16x20</p>
                             </div>
-                            <p>$350</p>
+                            <p class="canvas-price">$350</p>
                         </div>
                     </div>
 
@@ -261,8 +286,12 @@ li{
         </div>
 
         <div class="infobox" style=" flex: 50%; text-align: center; display: flex; flex-direction: column; align-items: stretch;">
-            <div id="slideshow">slideshow</div>
-            <div class="button1">✧ &nbsp;View Work&nbsp; ✧</div>
+            <div class="slideshow">
+                <div class="slide active"><img style="object-position: center;" src="Paintings/selfportrait1.jpg" alt="Oil Portrait"></div>
+                <div class="slide"><img style="object-position: top;" src="Paintings/grandma1.jpg" alt="Oil Portrait"></div>
+                <div class="slide"><img src="Paintings/portrait1.jpg" alt="Oil Portrait"></div>
+            </div>
+            <div class="button1">✧ &nbsp;Request Portrait&nbsp; ✧</div>
         </div>
     </div>
 
@@ -312,8 +341,12 @@ li{
         </div>
 
         <div class="infobox" style=" flex: 50%; text-align: center; display: flex; flex-direction: column; align-items: stretch;">
-            <div id="slideshow">slideshow</div>
-            <div class="button1">✧ &nbsp;View Work&nbsp; ✧</div>
+            <div class="slideshow">
+                <div class="slide active"><img style="object-position: center;" src="Paintings/QB_Portrait.PNG" alt="Oil Portrait"></div>
+                <div class="slide"><img style="object-position: center;" src="Paintings/untitled4.jpg" alt="Oil Portrait"></div>
+                <div class="slide"><img src="Paintings/solareclipse1.PNG" alt="Oil Portrait"></div>
+            </div>
+            <div class="button1">✧ &nbsp;Request Portrait&nbsp; ✧</div>
         </div>
     </div>
 
