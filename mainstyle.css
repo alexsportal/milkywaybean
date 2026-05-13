@@ -337,7 +337,7 @@ footer {
 .canvaspaper video {
     width: 100%;
     max-width:  -webkit-fill-available;
-    height: 94%;
+    height: 92%;
     max-height: -webkit-fill-available;
     object-fit: cover;
     object-position: bottom;
@@ -589,6 +589,10 @@ footer {
 
     #title {
         margin-top: 15px;
+    }
+
+    .canvaspaper video{
+        height:94%
     }
 }
 
