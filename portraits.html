@@ -147,7 +147,7 @@ li{
 }
 
 #section2, #section3, #section4 {
-    scroll-margin-top: 126px;
+    scroll-margin-top: 80px;
 }
 
 
@@ -156,6 +156,12 @@ li{
         height: 70vh;
     
    }
+}
+
+@media screen and (max-width: 820px) {
+#section2, #section3, #section4 {
+    scroll-margin-top: 126px;
+}
 }
 
 
@@ -188,8 +194,8 @@ li{
 <p id="swirl">𖦹</p>Menu
 </div>
 
-<div class="page"><a  href="portraits.html">Portraits <br> ✧</a></div>
-<div class="page"><a  href="">Gallery <br> ✧</a></div>
+<div class="activepage"><a  href="portraits.html">Portraits <br> ✧</a></div>
+<div class="page"><a  href="gallery.html">Gallery <br> ✧</a></div>
 <div class="page"><a href="" rel="noopener" target="_blank">Etsy <br> ✧</a></div>
 <div class="page"><a href="" rel="noopener" target="_blank">Dolli <br> ✧</a></div>
 <div class="page">Contact <br> ✧</div>
@@ -197,16 +203,16 @@ li{
 
 
 
-<main style="scroll-margin-top: 60px;" id="maincontent">
+<main id="maincontent">
 
 <section id="section1" class="section1">
-    <div class="container" onclick="location.href='#section3'">
+    <div class="container" onclick="location.href='#section2'">
         <img style="object-position: top;" src="Paintings/grandma1.jpg"/>
         <div class="caption">
             <h3 style="text-align: center;">Oil Portraits</h3>
         </div>
     </div>
-    <div class="container" onclick="location.href='#section4'">
+    <div class="container" onclick="location.href='#section3'">
         <img class="qbportrait" src="Paintings/QB_Portrait.PNG"/>
         <div class="caption">
             <h3 style="text-align: center;">Digital Portraits</h3>

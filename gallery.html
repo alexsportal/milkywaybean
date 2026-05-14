@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>MilkywayBean</title>
+<link rel="icon" type="image/x-icon" href="Assets/mwblogo.png">
+<link rel="stylesheet" href="mainstyle.css">
+<script src="mainscript.js" defer></script>
+
+<style>
+
+
+.gallerycontainer{
+    box-shadow: 6px 6px 0px #c0bae1;
+}
+
+.galleryitem {
+    margin: 0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: calc(25% - 15px);
+}
+
+.galleryimg {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: ease .3s;
+}
+
+.gallerytitle {
+    font-size: 16px;
+    margin: 8px 0 2px 0;
+    line-height: normal;
+    text-align: center;
+}
+
+.galleryinfo {
+    margin: 0 0 4px 0;
+    line-height: normal;
+    text-align: center;
+    font-size: 12px;
+}
+
+#lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    cursor: pointer;
+}
+
+#lightboximg {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+#lightboxcaption {
+    text-align: center;
+    color: white;
+}
+
+#lightboxcaption h3 {
+    font-size: 18px;
+    color: white;
+}
+
+#lightboxcaption p {
+    margin: 0;
+    margin-top:25px;
+    color: rgba(255,255,255,0.75);
+}
+
+@media screen and (max-width: 614px) {
+    .galleryitem {
+        width: calc(50% - 10px);
+    }
+}
+</style>
+</head>
+
+<body>
+<div id="pagebg"></div>
+<header>
+
+<a href="index.html"><img id="logobanner" src="Assets/bannerframe.png"/></a>
+<div id="title">✧ Milkyway<thin style="font-family: headertextthin;">Bean</thin> ✧</div>
+
+</header>
+<nav id="navbar">
+
+<div id="navmenu">
+<p id="swirl">𖦹</p>Menu
+</div>
+
+<div class="page"><a  href="portraits.html">Portraits <br> ✧</a></div>
+<div class="activepage"><a  href="gallery.html">Gallery <br> ✧</a></div>
+<div class="page"><a href="" rel="noopener" target="_blank">Etsy <br> ✧</a></div>
+<div class="page"><a href="" rel="noopener" target="_blank">Dolli <br> ✧</a></div>
+<div class="page">Contact <br> ✧</div>
+</nav>
+
+
+
+<main id="maincontent">
+    <div class="gallerycontainer" style="background-color:white;">
+
+        <figure class="galleryitem" onclick="openLightbox(this)">
+            <img class="galleryimg" src="Paintings/selfportrait1.jpg"/>
+            <figcaption>
+                <h3 class="gallerytitle">Self Portrait</h3>
+                <p class="galleryinfo">Oil on Canvas:<br> 16x20 · 2024</p>
+            </figcaption>
+        </figure>
+
+        <figure class="galleryitem" onclick="openLightbox(this)">
+            <img class="galleryimg" src="Paintings/portrait1.jpg"/>
+            <figcaption>
+                <h3 class="gallerytitle">Portrait</h3>
+                <p class="galleryinfo">Oil on Canvas:<br> 11x14 · 2024</p>
+            </figcaption>
+        </figure>
+
+        <figure class="galleryitem" onclick="openLightbox(this)">
+            <img class="galleryimg" src="Paintings/grandma1.jpg"/>
+            <figcaption>
+                <h3 class="gallerytitle">Grandma</h3>
+                <p class="galleryinfo">Oil on Canvas:<br> 8x10 · 2023</p>
+            </figcaption>
+        </figure>
+
+        <figure class="galleryitem" onclick="openLightbox(this)">
+            <img class="galleryimg" src="Paintings/fae1.jpg"/>
+            <figcaption>
+                <h3 class="gallerytitle">Fae</h3>
+                <p class="galleryinfo">Oil on Canvas:<br> 8x10 · 2023</p>
+            </figcaption>
+        </figure>
+
+        <figure class="galleryitem" onclick="openLightbox(this)">
+            <img class="galleryimg" src="Paintings/selfportrait1.jpg"/>
+            <figcaption>
+                <h3 class="gallerytitle">Self Portrait</h3>
+                <p class="galleryinfo">Oil on Canvas:<br> 16x20 · 2024</p>
+            </figcaption>
+        </figure>
+
+        <figure class="galleryitem" onclick="openLightbox(this)">
+            <img class="galleryimg" src="Paintings/portrait1.jpg"/>
+            <figcaption>
+                <h3 class="gallerytitle">Portrait</h3>
+                <p class="galleryinfo">Oil on Canvas:<br> 11x14 · 2024</p>
+            </figcaption>
+        </figure>
+
+        <figure class="galleryitem" onclick="openLightbox(this)">
+            <img class="galleryimg" src="Paintings/grandma1.jpg"/>
+            <figcaption>
+                <h3 class="gallerytitle">Grandma</h3>
+                <p class="galleryinfo">Oil on Canvas:<br> 8x10 · 2023</p>
+            </figcaption>
+        </figure>
+
+        <figure class="galleryitem" onclick="openLightbox(this)">
+            <img class="galleryimg" src="Paintings/fae1.jpg"/>
+            <figcaption>
+                <h3 class="gallerytitle">Fae</h3>
+                <p class="galleryinfo">Oil on Canvas:<br> 8x10 · 2023</p>
+            </figcaption>
+        </figure>
+
+    </div>
+
+    <div id="lightbox" onclick="this.style.display='none'">
+        <img id="lightboximg"/>
+        <div id="lightboxcaption">
+            <h3 id="lightboxtitle"></h3>
+            <p id="lightboxinfo"></p>
+        </div>
+    </div>
+</main>
+    <footer>
+        <div id="footer"> © Alexsandria Manuel 2026</div>
+        <div id="smfooter">
+        <a href="" rel="noopener" target="_blank"><img class="smfootericons" src="Assets/pinterest.png"/></a>
+        <a href="" rel="noopener" target="_blank"><img class="smfootericons" src="Assets/bluesky.png"/></a> 
+        <a href="" rel="noopener" target="_blank"><img class="smfootericons" src="Assets/youtube.png"/></a>
+        <a href="" rel="noopener" target="_blank"><img class="smfootericons" src="Assets/tiktok.png"/></a>
+        </div>
+    </footer>
+
+
+    </body>
+
+    </html>

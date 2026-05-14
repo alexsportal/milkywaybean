@@ -63,6 +63,9 @@ function initSlideshow(el) {
     }, 3500); // change ms to adjust speed
 }
 document.querySelectorAll('.slideshow').forEach(initSlideshow);
+
+// ─── Canvas prices ─────────────────────────────────────────────
+
 const canvasButtons = document.querySelectorAll('.button2');
 const thumbnails = document.querySelectorAll('.canvasthumbnail');
 const priceEls = document.querySelectorAll('.canvas-price');
@@ -107,7 +110,6 @@ function setActiveButton(activeBtn) {
     activeBtn.style.filter = 'saturate(1.5)';
 }
 
-// Default state
 setActiveButton(canvasButtons[0]);
 
 canvasButtons.forEach(btn => {
@@ -118,3 +120,18 @@ canvasButtons.forEach(btn => {
         updatePrices(isStretched ? stretchedPrices : basePrices);
     });
 });
+
+// ─── Gallery Lightbox ─────────────────────────────────────────────
+
+function openLightbox(figure) {
+    const img = figure.querySelector('img').src;
+    const title = figure.querySelector('.gallerytitle').textContent;
+    const info = figure.querySelector('.galleryinfo').textContent;
+
+    document.getElementById('lightboximg').src = img;
+    document.getElementById('lightboxtitle').textContent = title;
+    document.getElementById('lightboxinfo').textContent = info;
+
+    const lightbox = document.getElementById('lightbox');
+    lightbox.style.display = 'flex';
+}

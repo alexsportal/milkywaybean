@@ -98,6 +98,11 @@ header {
 a{
     text-decoration: none;
     color: #a07ec1;
+    height: stretch;
+    height: -webkit-fill-available;
+    width: stretch;
+    width: -webkit-fill-available;
+    display: block;
 }
 
 .page {
@@ -118,6 +123,24 @@ a{
 .page:hover {
     background-color: #d9b6dc21;
     font-weight: 700;
+    
+}
+
+.activepage{
+    background-color: #d9b6dc21;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: stretch;
+    width:-webkit-fill-available;
+    padding-bottom: 0;
+    padding-top: 7px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 45px;
+    font-family: headertextreg;
+    font-weight: 700;
+    color:#a07ec1;
 }
 
 .navbar2{
@@ -183,6 +206,9 @@ a{
 
 main {
     padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .container, .gallerycontainer{
@@ -287,6 +313,10 @@ footer {
     transition: .3s ease;
     justify-content: space-evenly;
     box-shadow: 3px 3px #c2bce2;
+}
+
+footer a, .imageborder a{
+    width:unset;
 }
 
 #swirl {
