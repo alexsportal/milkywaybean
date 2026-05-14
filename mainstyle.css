@@ -98,11 +98,6 @@ header {
 a{
     text-decoration: none;
     color: #a07ec1;
-    height: stretch;
-    height: -webkit-fill-available;
-    width: stretch;
-    width: -webkit-fill-available;
-    display: block;
 }
 
 .page {
@@ -185,6 +180,12 @@ a{
     transition: 0.3s ease;
     cursor: pointer;
     border: solid 1px #c2bce2;
+}
+
+#navbar a, #navmenu a{
+    width: stretch;
+    width: -webkit-fill-available;
+    display: block;
 }
 
 .sectionbutton a{
