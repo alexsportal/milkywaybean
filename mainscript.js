@@ -80,7 +80,7 @@ const panelStyle = {
 
 const stretchedStyle = {
 
-    boxShadow: '#bababa 3px 3px 0px',
+    boxShadow: '#d3d3d3 3px 3px 0px',
 };
 
 function updatePrices(prices) {

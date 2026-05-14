@@ -208,7 +208,7 @@ main {
     padding: 20px 20px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
 }
 
 .container, .gallerycontainer{
@@ -384,7 +384,7 @@ footer a, .imageborder a{
     box-shadow: 3px 4px #c2bce2;
 }
 
-.button2{
+.button2,.button{
     border-radius: 30px;
     background-color: white;
     padding-bottom: 1px;
@@ -467,7 +467,7 @@ footer a, .imageborder a{
     transform: scale(1.01);
 }
 
-.button1:hover,.button2:hover,.smbuttons:hover{
+.button1:hover,.button2:hover,.button:hover,.smbuttons:hover{
     filter: saturate(1.5);
     transform: scale(.98,.98);
 }
