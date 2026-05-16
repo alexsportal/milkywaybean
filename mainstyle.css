@@ -261,7 +261,6 @@ main {
 }
 
 h3 {
-    line-height: 0;
     color: #9993B9;
     font-size: 20px;
 }
@@ -436,7 +435,7 @@ footer a, .imageborder a{
 .canvaspaper video {
     width: 100%;
     max-width:  -webkit-fill-available;
-    height: 92%;
+    height: 100%;
     max-height: -webkit-fill-available;
     object-fit: cover;
     object-position: bottom;
@@ -448,7 +447,7 @@ footer a, .imageborder a{
 .canvas{
     width: stretch;
     display: block;
-    height: 500px;
+    height: 600px;
     background-color: #c0bae12b;
     border-radius: 20px;
     border: solid 2px #dcd8f1;
@@ -549,6 +548,10 @@ footer a, .imageborder a{
     .light{
     height:260px;
    } 
+
+   .canvas{
+    height:700px;
+   }
 }
 
 @keyframes swirlSpin {
@@ -654,8 +657,8 @@ footer a, .imageborder a{
     .canvas {
         width: stretch;
         object-fit: contain;
-        height:600px;
     }
+
     .navbar2{
         top:70px;
         display: flex;
@@ -693,9 +696,6 @@ footer a, .imageborder a{
         margin-top: 15px;
     }
 
-    .canvaspaper video{
-        height:94%
-    }
 }
 
 @media screen and (orientation: landscape) and (max-width: 1180px) {
