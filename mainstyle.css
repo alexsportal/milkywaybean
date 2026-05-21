@@ -715,5 +715,11 @@ footer a, .imageborder a{
     }
 }
 
+@media screen and (max-width: 500px) {
+    .canvas {
+        height:400px;
+    }
+}
+
 
 
